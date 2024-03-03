@@ -32,5 +32,13 @@ namespace GameTest
 
 			Assert::AreEqual("Draw", output2);
 		}
+		TEST_METHOD(GameTest3) {
+			char* player1 = "rock";
+			char* player2 = "paper";
+			char output3[10];
+			strcpy_s(output3, getWinner(player1, player2));
+			Assert::AreEqual("Invalid", output3);
+		}
+
 	};
 }
