@@ -23,8 +23,14 @@ namespace GameTest
 			char output1[10];
 			strcpy_s(output1,getWinner(player1, player2));
 			Assert::AreEqual("player1", output1);
-		
 		}
-		
+		TEST_METHOD(GameTest2) {
+			char* player1 = "Paper";
+			char* player2 = "Paper";
+			char output2[10];
+			strcpy_s(output2, getWinner(player1, player2));
+
+			Assert::AreEqual("Draw", output2);
+		}
 	};
 }
